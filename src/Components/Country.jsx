@@ -1,6 +1,9 @@
-function Country() {
+function Country({post}) {
 
-    return
+    return(       
+        <h3>{post.name}</h3>
+        
+    )
     
 }
 
