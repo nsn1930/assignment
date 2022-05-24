@@ -1,8 +1,13 @@
 function Country({post}) {
 
-    return(       
-        <h3>{post.name}</h3>
-        
+    return( 
+        <>
+            <tr>  
+                <td>{post.name}</td>   
+                <td>{post.area}</td>   
+                <td>{post.region}</td>  
+            </tr>
+        </>
     )
     
 }

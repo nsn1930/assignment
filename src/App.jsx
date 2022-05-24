@@ -18,11 +18,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <table>
+          <thead>
+            <th>Country name</th>
+            <th>Area '(km2)'</th>
+            <th>Country region</th>
+          </thead>
+          <tbody>
           {
             posts.map((c, i) => <Country key={i} post={c}></Country>)
           }
-               
+          </tbody>
+        </table>      
       </header>
     </div>
   );
