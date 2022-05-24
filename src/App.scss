@@ -15,6 +15,10 @@
 
 .App-header {
   background-color: #424242;
+  background-image: url(https://images.photowall.com/products/64820/world-map-sepia.jpg?h=699&q=85);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,20 +28,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 th,
 td {
   border: 1px solid;
@@ -45,7 +35,7 @@ td {
 }
 
 table {
-  margin-top: 100px;
+  margin: 20px 0;
   font-size: 18px;
 }
 
