@@ -1,11 +1,10 @@
-function Button() {
+function Button({smaller, reset, oceania}) {
 
     return(
         <>
-            <button>SORT ALPHABETICALY</button>
-            <button>SMALLER THAN LITHUANIA</button>
-            <button>OCEANIA COUNTRIES</button>
-            <button>TABLE RESET</button>
+            <button className='btn' onClick={smaller}>SMALLER THAN LITHUANIA</button>
+            <button className='btn' onClick={oceania}>OCEANIA COUNTRIES</button>
+            <button className='btn' onClick={reset}>TABLE RESET</button>
         </>
     )
 }

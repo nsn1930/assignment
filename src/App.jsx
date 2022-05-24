@@ -15,11 +15,23 @@ function App() {
         })
     }, []);
 
+  const smaller = () => {
+    setPosts(posts.filter(p => p.area < 65300))
+  }
+
+  const oceania = () => {
+    setPosts(posts.filter(p => p.region === 'Oceania'))
+  }
+
+  const reset = () => {
+    window.location.reload()
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Countries</h1>
-        <Button></Button>
+        <Button smaller={smaller} reset={reset} oceania={oceania}></Button>
         <table>
           <thead>
             <th>Country name</th>
