@@ -1,4 +1,4 @@
-function Button({smaller, reset, oceania}) {
+function Button({smaller, reset, oceania, sort}) {
 
     return(
         <>

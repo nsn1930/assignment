@@ -9,11 +9,16 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-        axios.get('https://restcountries.com/v2/all?fields=name,region,area')
-        .then(res => {
-            setPosts(res.data);
-        })
-    }, []);
+    axios.get('https://restcountries.com/v2/all?fields=name,region,area')
+    .then(res => {
+      setPosts(res.data);
+    })
+  }, []);
+  
+  const sort = () => {
+    setPosts(posts.reverse())
+    setPosts(posts.filter(a => a.name))
+  }
 
   const smaller = () => {
     setPosts(posts.filter(p => p.area < 65300))
@@ -27,6 +32,7 @@ function App() {
     window.location.reload()
   }
 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -34,7 +40,7 @@ function App() {
         <Button smaller={smaller} reset={reset} oceania={oceania}></Button>
         <table>
           <thead>
-            <th>Country name</th>
+            <th>Country name <button className='btnSort' onClick={sort}>↕</button></th>
             <th>Area (km<span>&#178;</span>)</th>
             <th>Country region</th>
           </thead>
