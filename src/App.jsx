@@ -21,12 +21,12 @@ function App() {
         <table>
           <thead>
             <th>Country name</th>
-            <th>Area '(km2)'</th>
+            <th>Area (km<span>&#178;</span>)</th>
             <th>Country region</th>
           </thead>
           <tbody>
           {
-            posts.map((c, i) => <Country key={i} post={c}></Country>)
+            posts.map((c, i) => <Country index={i} key={i} post={c}></Country>)
           }
           </tbody>
         </table>      
